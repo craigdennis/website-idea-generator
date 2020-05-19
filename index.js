@@ -109,27 +109,26 @@ function createHexCode() {
   return hexcode;
 }
 
-websiteText.innerText = websitesTypes[randomNumber(websitesTypes)];
-colourText.innerText = createHexCode();
-sectionText.innerText = sectionTypes[randomNumber(sectionTypes)];
-animationText.innerText = animationTypes[randomNumber(animationTypes)];
+createIdea();
 
-generateBtn.addEventListener('click', function () {
-  websiteText.innerText = websitesTypes[randomNumber(websitesTypes)];
-  let hexCode = createHexCode();
-  colourText.innerText = hexCode;
-  colourText.style.backgroundColor = hexCode;
-  sectionText.innerText = randomSections();
-  animationText.innerText = animationTypes[randomNumber(animationTypes)];
-});
+generateBtn.addEventListener('click', createIdea);
 
 function randomSections() {
   const numberOfSections = Math.floor(Math.random() * 4) + 1;
-  console.log("random sectons" + numberOfSections);
+  console.log('random sectons' + numberOfSections);
   // Shuffle array
   let shuffled = sectionTypes.sort(() => 0.5 - Math.random());
   // Get sub-array of first n elements after shuffled
   let selected = shuffled.slice(0, numberOfSections);
-    console.log(selected);
+  console.log(selected);
   return selected.join(', ');
+}
+
+function createIdea() {
+    websiteText.innerText = websitesTypes[randomNumber(websitesTypes)];
+    let hexCode = createHexCode();
+    colourText.innerText = hexCode;
+    colourText.style.backgroundColor = hexCode;
+    sectionText.innerText = randomSections();
+    animationText.innerText = animationTypes[randomNumber(animationTypes)];
 }
