@@ -1,0 +1,9 @@
+.container {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container span {
+    font-size: 30px;
+}
