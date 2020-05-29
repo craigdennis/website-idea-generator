@@ -57,7 +57,7 @@ const websitesTypes = [
   'Lightbulb',
   'Interior Design',
   'Robot',
-  'Space Rocket'
+  'Space Rocket',
 ];
 const animationTypes = [
   'fade',
@@ -90,7 +90,6 @@ const animationTypes = [
 ];
 
 const sectionTypes = [
-  'Hero Image',
   'Nav-Bar',
   'Gallery',
   'Testimonials',
@@ -98,9 +97,41 @@ const sectionTypes = [
   'Email-Signup',
   'Contact-Form',
   'Features',
-  'Footer',
   'Social Links',
   'Pricing',
+];
+
+const headers = [
+  'Hero image',
+  'Hero image with email sign up',
+  'Hero image with form',
+  'Hero image with bullet points',
+  '4 hero images',
+  'Hero image with bullet points and buy now button',
+  'Hero image with bullet points and email sign up',
+  'Hero video',
+];
+
+const main = [
+  'Nav-Bar',
+  'Gallery',
+  'Testimonials',
+  'CTA',
+  'Email-Signup',
+  'Contact-Form',
+  'Features',
+  'Social Links',
+  'Pricing',
+];
+
+const footers = [
+  'Footer with social links',
+  'Footer with social links and address',
+  'Footer with latest blog posts',
+  'Footer with social link, address and latest blog posts',
+  'Footer with social links and latest blog posts',
+  'Footer with social links and email sign up',
+  'Footer with email signup and latest blog posts',
 ];
 const hexCodeLetters = [
   '0',
@@ -144,22 +175,36 @@ createIdea();
 
 generateBtn.addEventListener('click', createIdea);
 
-function randomSections() {
+
+
+function createSections() {
+  const headerSection = headers[randomNumber(headers)];
+  const mainSection = randomSections(main);
+  const footerSection = footers[randomNumber(footers)];
+
+  return headerSection + ', ' + mainSection + ', and ' + footerSection;
+}
+
+function createIdea() {
+  websiteText.innerText = websitesTypes[randomNumber(websitesTypes)];
+  let hexCode = createHexCode();
+  colourText.innerText = hexCode;
+  colourText.style.backgroundColor = hexCode;
+
+  sectionText.innerText = createSections();
+
+  animationText.innerText = animationTypes[randomNumber(animationTypes)];
+}
+
+function randomSections(sections) {
   const numberOfSections = Math.floor(Math.random() * 4) + 1;
   console.log('random sectons' + numberOfSections);
   // Shuffle array
-  let shuffled = sectionTypes.sort(() => 0.5 - Math.random());
+  let shuffled = sections.sort(() => 0.5 - Math.random());
   // Get sub-array of first n elements after shuffled
   let selected = shuffled.slice(0, numberOfSections);
   console.log(selected);
   return selected.join(', ');
 }
 
-function createIdea() {
-    websiteText.innerText = websitesTypes[randomNumber(websitesTypes)];
-    let hexCode = createHexCode();
-    colourText.innerText = hexCode;
-    colourText.style.backgroundColor = hexCode;
-    sectionText.innerText = randomSections();
-    animationText.innerText = animationTypes[randomNumber(animationTypes)];
-}
+
