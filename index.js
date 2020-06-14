@@ -158,6 +158,8 @@ let sectionText = document.getElementById('sections');
 let animationText = document.getElementById('animation');
 let generateBtn = document.getElementById('generate');
 
+let hexCode;
+
 function randomNumber(type) {
   return Math.floor(Math.random() * type.length);
 }
@@ -187,13 +189,12 @@ function createSections() {
 
 function createIdea() {
   websiteText.innerText = websitesTypes[randomNumber(websitesTypes)];
-  let hexCode = createHexCode();
+  hexCode = createHexCode();
   colourText.innerText = hexCode;
   colourText.style.backgroundColor = hexCode;
-
   sectionText.innerText = createSections();
-
   animationText.innerText = animationTypes[randomNumber(animationTypes)];
+  document.getElementById('craig-power').style.color = hexCode;
 }
 
 function randomSections(sections) {
