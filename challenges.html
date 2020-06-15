@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Idea Generator - Challenges</title>
+    <link rel="stylesheet" href="css/challenges.css" />
+  </head>
+  <body>
+    <h1>Challenges</h1>
+
+    <section class="submissions">
+      <form name="submission" method="POST" data-netlify="true">
+        <div class="upper-sub">
+          <label for="name">Name:</label>
+          <input id="name" type="text" />
+
+          <label for="twitter">Twitter URL:</label>
+          <input class="url-input" id="twitter" type="text" />
+
+          <label for="week">Select Week:</label>
+          <select name="weeks" id="week">
+            <option value="1">Week 1</option>
+          </select>
+        </div>
+
+        <div class="lower-sub">
+          <label for="github">Repository URL:</label>
+          <input class="url-input" type="text" id="github" />
+
+          <label for="live">Livesite URL:</label>
+          <input class="url-input" type="text" id="live" />
+        </div>
+
+        <button class="submit-btn" type="submit">Submit</button>
+      </form>
+    </section>
+
+    <main class="container">
+      <div class="card card-1">
+        <img src="imgs/week-1.png" alt="" />
+        <h2>Week 1</h2>
+        <button>Submit Design</button>
+      </div>
+<!-- 
+      <div class="card card-2">
+        <img src="imgs/week-1.png" alt="" />
+        <h2>Week 2</h2>
+        <button>Submit Design</button>
+      </div>
+
+      <div class="card card-3">
+        <img src="imgs/week-1.png" alt="" />
+        <h2>Week 3</h2>
+        <button>Submit Design</button>
+      </div>
+
+      <div class="card card-4">
+        <img src="imgs/week-1.png" alt="" />
+        <h2>Week 4</h2>
+        <button>Submit Design</button>
+      </div> -->
+    </main>
+  </body>
+</html>
