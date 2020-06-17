@@ -2,21 +2,21 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 h1 {
   font-family: 'Roboto Slab', serif;
-  font-size: 100px;
+  font-size: 64px;
   text-align: center;
-
+  margin-top: 30px;
 }
 
 button {
-    border-radius: 50px;
-    border: none;
-    padding: 10px 55px;
-    font-size: 18px;
+  border-radius: 50px;
+  border: none;
+  padding: 10px 55px;
+  font-size: 18px;
 }
 
 .container {
@@ -29,39 +29,37 @@ button {
 }
 
 .submissions {
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-
+  width: 60%;
+  margin: 4% auto;
+  text-align: center;
 }
 
 .submissions input {
-    padding-left: 1%;
-    font-size: 16px;
+  padding-left: 1%;
+  font-size: 16px;
+  height: 25px;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .upper-sub {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
 }
 
 .lower-sub {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
-
-.url-input {
-    width: 25%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .submit-btn {
-    margin-bottom: 2%;
+  margin-bottom: 2%;
 }
 
 #week {
-    width: 7%;
+  height: 25px;
 }
 
 .container img {
@@ -75,11 +73,27 @@ button {
 }
 
 .card-1 button {
-    background-color: #4ba9b6;
-    color: white;
+  background-color: #4ba9b6;
+  color: white;
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 1000px) {
+  h1 {
+    font-size: 100px;
+  }
+  body {
+    font-size: 30px;
+  }
+
+  .submissions {
+    width: 70%;
+  }
+
+  .submissions input {
+    margin-top: initial;
+    margin-bottom: initial;
+  }
+
   .container {
     display: grid;
     grid-gap: 3%;
@@ -103,9 +117,35 @@ button {
     grid-column: 2/3;
     grid-row: 2/3;
   }
+
+  .upper-sub {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .lower-sub {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  .url-input {
+    width: 25%;
+  }
+
+  #week {
+  
+  }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1130px) {
+  .submissions {
+    width: 90%;
+  }
+
   .card-1 {
     grid-column: 1/2;
     grid-row: 1/2;

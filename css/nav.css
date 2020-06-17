@@ -1,0 +1,25 @@
+.nav a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .nav-list {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .nav-item {
+    list-style: none;
+    margin-left: 4%;
+    text-transform: uppercase;
+  }
+  
+  
+  
+  .nav-list:last-child {
+    margin-right: 3%;
+  }
