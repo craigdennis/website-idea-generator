@@ -34,7 +34,7 @@ h1 {
 }
 
 .btn:hover {
-  background-color: black;
+  background-color: hsl(0, 0%, 20%);
   color: white;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.8);
   transform: translateY(-5px);
