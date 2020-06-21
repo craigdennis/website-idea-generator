@@ -26,6 +26,11 @@ button {
   color: white;
 }
 
+.card-2 button {
+  background-color:#f365ac;
+  color: white;
+}
+
 .card a {
   color: white;
   text-decoration: none;
@@ -82,12 +87,14 @@ button {
 
 .container img {
   width: 100%;
+
 }
 
 .card {
   border: 1px solid hsl(0, 0%, 50%);
   padding-top: 10%;
   padding-bottom: 10%;
+
 }
 
 @media only screen and (min-width: 600px) {
