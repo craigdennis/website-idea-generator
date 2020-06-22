@@ -209,3 +209,30 @@ function randomSections(sections) {
 }
 
 
+
+//Download images
+
+const captureDiv = document.querySelector('#idea');
+
+function downloadURI(uri, name) {
+    var link = document.createElement("a");
+
+    link.download = name;
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    clearDynamicLink(link); 
+}
+
+function DownloadAsImage() {
+    html2canvas(captureDiv).then(function (canvas) {
+        var myImage = canvas.toDataURL();
+        downloadURI(myImage, "generated-idea.png");
+    });
+}
+
+document.querySelector('#download').addEventListener('click', function() {
+    DownloadAsImage();
+});
+
+

@@ -40,6 +40,10 @@ h1 {
   transform: translateY(-5px);
 }
 
+#download {
+  margin-left: 2%;
+}
+
 .footer {
   text-align: center;
 }
