@@ -31,6 +31,13 @@ button {
   color: white;
 }
 
+.card-3 button {
+  background-color:#a01353;
+  color: white;
+  margin-top: 13%;
+
+}
+
 .card a {
   color: white;
   text-decoration: none;
@@ -42,13 +49,12 @@ button {
 }
 
 .container {
-  width: 50%;
-  /* change to 90% when at 3 cards */
+  width: 90%;
   margin: 0 auto;
   text-align: center;
   display: grid;
   grid-gap: 3%;
-  margin-bottom: 10%;
+  margin-bottom: 15%;
 }
 
 .submissions {
